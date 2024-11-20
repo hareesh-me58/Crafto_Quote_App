@@ -1,0 +1,91 @@
+.quote-creation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.quote-creation-container>button {
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  margin: 10px;
+  font-size: 1.4rem;
+}
+
+.quote-creation-container>button:hover {
+  background-color: #0056b3;
+}
+
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: none;
+  height: 100px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .quote-creation-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-creation-container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  textarea {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  input[type="file"] {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}

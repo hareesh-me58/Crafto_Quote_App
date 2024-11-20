@@ -1,0 +1,116 @@
+.quote-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-item {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quote-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.quote-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.quote-meta {
+  padding: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.quote-meta p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.load-more {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.load-more:hover {
+  background-color: #0056b3;
+}
+
+.floating-action-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.floating-action-button:hover {
+  background-color: #1e7e34;
+}
+
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 1rem;
+  }
+
+  .quote-meta p {
+    font-size: 0.8rem;
+  }
+
+  .floating-action-button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-text {
+    font-size: 0.9rem;
+  }
+
+  .quote-meta p {
+    font-size: 0.7rem;
+  }
+
+  .floating-action-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
