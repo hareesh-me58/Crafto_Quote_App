@@ -32,4 +32,4 @@ In QuoteCreationPage
    git clone https://github.com/yourusername/crafto-quote-app.git
 
 2. Hosted the Website 
-      website Link ---  https://harmonious-alfajores-d41c72.netlify.app/
+      website Link --- (https://hareeshcraftoapp.netlify.app/)
