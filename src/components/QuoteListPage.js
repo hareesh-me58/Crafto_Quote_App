@@ -16,7 +16,6 @@ const QuoteListPage = () => {
       if (quoteData.length === 0) {
         setHasMore(false);
       }
-
       setQuotes((prev) => [...prev, ...quoteData]);
     } catch (error) {
       console.error("Error fetching quotes");
@@ -24,16 +23,25 @@ const QuoteListPage = () => {
   }, [offset]);
 
   useEffect(() => {
-    fetchQuotes();
-  }, [fetchQuotes]);
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/");
+    } else {
+      fetchQuotes();
+    }
+  }, [fetchQuotes, navigate]);
 
-  const handleCreateQuote = () => {
-    navigate("/create-quote");
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
   };
 
   return (
     <div className="quote-list-container">
       <h2>Quotes</h2>
+      <button className="logout-button" onClick={handleLogout}>
+        Logout
+      </button>
       <div>
         {quotes.map((quote) => (
           <div className="quote-item" key={quote.id}>
@@ -58,7 +66,12 @@ const QuoteListPage = () => {
         </button>
       )}
 
-      <button className="floating-action-button" onClick={handleCreateQuote}>
+      <button
+        className="floating-action-button"
+        onClick={() => {
+          navigate("/create-quote");
+        }}
+      >
         +
       </button>
     </div>

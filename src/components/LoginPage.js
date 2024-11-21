@@ -11,7 +11,6 @@ const LoginPage = () => {
   const handleSubmit = async () => {
     try {
       const { data } = await login(username, otp);
-      console.log(data);
       localStorage.setItem("token", data.token);
       navigate("/quotes");
     } catch (error) {
