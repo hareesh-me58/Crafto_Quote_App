@@ -22,7 +22,7 @@ In Quote Page
 In QuoteCreationPage
 -we quote Text Area to write , file upload to image
 -we have submit button to submit our data
--And we have back to quote page
+-And we have a back button to go to quote page
 
 
 ## Installation
@@ -32,4 +32,4 @@ In QuoteCreationPage
    git clone https://github.com/yourusername/crafto-quote-app.git
 
 2. Hosted the Website 
-      website Link ---  
+      website Link ---  https://harmonious-alfajores-d41c72.netlify.app/
